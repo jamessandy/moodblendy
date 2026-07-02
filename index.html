@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moodblendy &mdash; Your References, Rendered</title>
 <meta name="description" content="Moodblendy helps creatives blend references, palettes, and direction into visual assets that feel like theirs.">
+<meta name="theme-color" content="#261fb3">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+<link rel="apple-touch-icon" href="moodblendy-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
@@ -58,10 +61,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:600;letter-spacing:-.03em;line-h
 .nav.scrolled{background:rgba(var(--midnight-rgb),.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 18px 55px -45px var(--glow)}
 .nav-in{max-width:var(--maxw);margin:0 auto;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;transition:padding .35s var(--ease)}
 .nav.scrolled .nav-in{padding-top:14px;padding-bottom:14px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;font-size:1.1rem}
-.brand .mark{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink);position:relative;transition:transform .35s var(--ease)}
-.brand .mark::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--ink);animation:markPulse 3.6s ease-in-out infinite}
-.brand:hover .mark{transform:rotate(90deg) scale(1.05)}
+.brand{display:flex;align-items:center;border-radius:8px;transition:transform .3s var(--ease),filter .3s var(--ease)}
+.brand-logo{height:42px;width:auto;display:block;filter:drop-shadow(0 16px 28px rgba(var(--cream-rgb),.18))}
+.brand:hover{transform:translateY(-2px);filter:drop-shadow(0 0 18px rgba(var(--cream-rgb),.28))}
 .menu-pill{display:flex;align-items:center;justify-content:space-between;gap:54px;border:1px solid var(--line-2);border-radius:10px;padding:11px 18px;cursor:pointer;background:rgba(var(--indigo-rgb),.48);backdrop-filter:blur(8px);transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
 .menu-pill span{font-size:.95rem}
 .menu-pill .bars{display:flex;flex-direction:column;gap:4px}
@@ -291,7 +293,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 44px}
 
 <nav class="nav">
   <div class="nav-in">
-    <a href="#" class="brand"><span class="mark" aria-hidden="true"></span>Moodblendy</a>
+    <a href="#" class="brand" aria-label="Moodblendy home"><img class="brand-logo" src="moodblendy-logo-transparent.png" alt="Moodblendy"></a>
     <div class="menu-pill" id="menuBtn" role="button" tabindex="0" aria-label="Open menu"><span>Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span></div>
     <a href="https://app.moodblendy.com/" class="ea">Early access</a>
   </div>
